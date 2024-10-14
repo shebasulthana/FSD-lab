@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Mobile Number Validation</title>
+</head>
+<body>
+    <h1>sheba sulthana - CH.EN.U4AIE21148 </h1>
+    <form id="mobileForm">
+        <label for="mobileNumber">Enter Mobile Number:</label>
+        <input type="text" id="mobileNumber" name="mobileNumber">
+        <button type="button" onclick="validateMobile()">Validate</button>
+    </form>
+
+    <script>
+        function validateMobile() {
+            const mobileNumber = document.getElementById('mobileNumber').value;
+            const mobilePattern = /^[6-9]\d{9}$/;
+
+            if (mobilePattern.test(mobileNumber)) {
+                alert('Valid Mobile Number');
+            } else {
+                alert('Invalid Mobile Number');
+            }
+        }
+    </script>
+</body>
+</html>
